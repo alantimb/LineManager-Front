@@ -1,7 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import SingUn from "./pages/Auth/SingUp";
-import GlobalStyle from "./assets/styles/GlobalStyle";
+import SingUp from "./ui/pages/Auth/SingUp";
+import GlobalStyle from "./ui/assets/styles/GlobalStyle";
+import SingIn from "./ui/pages/Auth/SingIn";
+import Home from "./ui/pages/Home";
 
 function App() {
   return (
@@ -9,7 +11,9 @@ function App() {
     <GlobalStyle />
     <Router>
       <Routes>
-        <Route path="/" element={<SingUn />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/sign-in" element={<SingIn />} />
+        <Route path="/sign-up" element={<SingUp />} />
       </Routes>
     </Router>
     </>

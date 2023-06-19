@@ -5,7 +5,7 @@ import { BsFillPersonFill } from "react-icons/bs";
 import { BsFillBuildingsFill } from "react-icons/bs";
 import RegistrationForm from "./RegistrationForm";
 
-export default function SingUn() {
+export default function SingUp() {
   const [chooseUser, setChooseUser] = useState(undefined);
   console.log(chooseUser);
 
@@ -77,7 +77,6 @@ const UserOption = styled.div`
 `;
 
 const SingUpContainer = styled.div`
-  background-image: linear-gradient(to bottom, #0052CC, #3B7BFF, #8ED1FF);;
   height: 100vh;
   width: 100%;
   

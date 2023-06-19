@@ -28,6 +28,9 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background-image: linear-gradient(to top, #0052CC, #588df7, #a2d9fd);
+	height: 100vh;
+	width: 100%;
 }
 ol, ul {
 	list-style: none;
@@ -46,6 +49,7 @@ table {
 }
 * {
 	box-sizing: border-box;
+	
 }
 `;
 

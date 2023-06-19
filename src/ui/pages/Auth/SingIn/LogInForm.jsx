@@ -1,19 +1,16 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export default function RegistrationForm(props) {
-    if (props.userType === undefined) return <></>;
+export default function LogInForm(props) {
     
     return (
         <>
          <SignUpForm>
-            <input placeholder={`${props.userType === 'person' ? "Cpf" : "Cnpj"}`} type="text" />
-            <input placeholder="Nome" type="text" />
             <input placeholder="E-mail" type="text" />
             <input placeholder="Senha" type="text" />
-            <button>Cadastrar</button>
+            <button>Entrar</button>
          </SignUpForm>
-         <LinkToSignIn to="" >Já tem cadastro? Então pule para a tela de login!</LinkToSignIn>
+         <LinkToSignIn to="/sign-up" >Ainda não tem cadastro? Então clique aqui!</LinkToSignIn>
         </>
     );
 }
