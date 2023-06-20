@@ -8,7 +8,7 @@ export default function Home() {
       <HomeLayout>
         <NavigationBar />
   
-        {/* <Sidebar /> */}
+        <Sidebar />
       </HomeLayout>
     );
   }

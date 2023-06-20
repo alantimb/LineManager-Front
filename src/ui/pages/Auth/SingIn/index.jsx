@@ -32,37 +32,4 @@ const SingInContainer = styled.div`
     width: 240px;
     align-self: center;
   }
-
-  form {
-    display: flex;
-    flex-direction: column;
-
-    input {
-      width: 360px;
-      height: 50px;
-      margin-bottom: 12px;
-      border-radius: 5px;
-      border: 1px solid #fff;
-      color: #000;
-      font-size: 18px;
-      padding-left: 10px;
-    }
-
-    button {
-      width: 360px;
-      height: 50px;
-      margin-bottom: 12px;
-      border-radius: 5px;
-      border: 1px solid #3B7BFF;
-      color: #000;
-      background-color: #3B7BFF;
-      font-size: 18px;
-
-      &:hover {
-      cursor: pointer;
-      background-color: lightblue;
-      opacity: 0.6;
-      }
-    }
-  }
 `;
