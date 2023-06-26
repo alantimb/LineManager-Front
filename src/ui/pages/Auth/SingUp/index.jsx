@@ -7,7 +7,6 @@ import RegistrationForm from "./RegistrationForm";
 
 export default function SingUp() {
   const [chooseUser, setChooseUser] = useState(undefined);
-  console.log(chooseUser);
 
   return (
     <SingUpContainer>

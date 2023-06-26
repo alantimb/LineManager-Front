@@ -1,23 +1,42 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components"
+import { RiLogoutCircleRLine } from "react-icons/ri";
+import useToken from "../../../data/hooks/useToken";
 
 export default function AuthArea() {
+    const token = useToken();
+
+    if (!token) {
+        return (
+            <AuthForms isToken={true} >
+                <Link to="/sign-in">
+                    <button>Entrar</button>
+                </Link>
+                
+                <Link to="/sign-up">
+                    <button>Inscrever-se</button>
+                </Link>
+                
+                {/* <Link to="/home-two">
+                    <BsFillGearFill className="react-icons" />
+                </Link> */}
+            </AuthForms>
+        )
+    }
+    
     return (
-        <AuthForms>
-            <Link to="/sign-in">
-                <button>Entrar</button>
+        <AuthForms isToken={false} >
+            <Link to="/home-two">
+                <RiLogoutCircleRLine className="react-icons" />
             </Link>
-            <Link to="/sign-up">
-                <button>Inscrever-se</button>
-            </Link>
-            <div>C</div>
         </AuthForms>
     )
 }
 
 const AuthForms = styled.div`
-    width: 240px;
+    width: ${(props) => props.isToken ? '180px' : '20px'};
     margin-right: 10px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,9 +52,11 @@ const AuthForms = styled.div`
         font-weight: 700;
     }
 
-    div {
-        width: 20px;
-        height: 20px;
-        background-color: coral;
+    .react-icons {
+        font-size: 20px;
+        
+        &:hover {
+            cursor: pointer;
+        }
     }
 `;
